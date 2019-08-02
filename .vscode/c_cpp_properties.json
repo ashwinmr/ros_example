@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/opt/ros/melodic/include",
+        "/home/ashwinmr/Documents/robo/workspaces/proj/src/my_robot/include",
+        "/usr/include"
+      ],
+      "name": "Linux"
+    }
+  ]
+}
