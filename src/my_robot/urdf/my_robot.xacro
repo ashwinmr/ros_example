@@ -17,13 +17,13 @@
   <link name="chassis">
     <visual>
       <geometry>
-        <box size="0.4 0.4 0.1"/>
+        <box size="0.5 0.35 0.1"/>
       </geometry>
     </visual>
 
     <collision>
       <geometry>
-        <box size="0.4 0.4 0.1"/>
+        <box size="0.5 0.3 0.1"/>
       </geometry>
     </collision>
 
@@ -36,5 +36,142 @@
       />
     </inertial>
   </link>
+
+  <!-- Create fl wheel -->
+  <link name="wheel_fl">
+    <visual>
+      <origin xyz="0 0 0" rpy=" 0 1.5707 1.5707"/>
+      <geometry>
+        <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy=" 0 1.5707 1.5707"/>
+      <geometry>
+        <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0" rpy=" 0 1.5707 1.5707"/>
+      <mass value="5.0"/>
+      <inertia
+          ixx="0.1" ixy="0" ixz="0"
+          iyy="0.1" iyz="0"
+          izz="0.1"
+      />
+    </inertial>
+  </link>
+
+  <joint type="continuous" name="wheel_fl_hinge">
+    <origin xyz="0.125 0.2 0" rpy="0 0 0"/>
+    <child link="wheel_fl"/>
+    <parent link="chassis"/>
+    <axis xyz="0 1 0" rpy="0 0 0"/>
+    <limit effort="10000" velocity="1000"/>
+    <dynamics damping="1.0" friction="1.0"/>
+  </joint>
+
+  <!-- Create fr wheel -->
+  <link name="wheel_fr">
+      <visual>
+        <origin xyz="0 0 0" rpy=" 0 1.5707 1.5707"/>
+        <geometry>
+          <cylinder radius="0.1" length="0.05"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy=" 0 1.5707 1.5707"/>
+        <geometry>
+          <cylinder radius="0.1" length="0.05"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <origin xyz="0 0 0" rpy=" 0 1.5707 1.5707"/>
+        <mass value="5.0"/>
+        <inertia
+            ixx="0.1" ixy="0" ixz="0"
+            iyy="0.1" iyz="0"
+            izz="0.1"
+        />
+      </inertial>
+    </link>
+  
+    <joint type="continuous" name="wheel_fr_hinge">
+      <origin xyz="0.125 -0.2 0" rpy="0 0 0"/>
+      <child link="wheel_fr"/>
+      <parent link="chassis"/>
+      <axis xyz="0 1 0" rpy="0 0 0"/>
+      <limit effort="10000" velocity="1000"/>
+      <dynamics damping="1.0" friction="1.0"/>
+    </joint>
+
+    <!-- Create rl wheel -->
+  <link name="wheel_rl">
+      <visual>
+        <origin xyz="0 0 0" rpy=" 0 1.5707 1.5707"/>
+        <geometry>
+          <cylinder radius="0.1" length="0.05"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy=" 0 1.5707 1.5707"/>
+        <geometry>
+          <cylinder radius="0.1" length="0.05"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <origin xyz="0 0 0" rpy=" 0 1.5707 1.5707"/>
+        <mass value="5.0"/>
+        <inertia
+            ixx="0.1" ixy="0" ixz="0"
+            iyy="0.1" iyz="0"
+            izz="0.1"
+        />
+      </inertial>
+    </link>
+  
+    <joint type="continuous" name="wheel_rl_hinge">
+      <origin xyz="-0.125 0.2 0" rpy="0 0 0"/>
+      <child link="wheel_rl"/>
+      <parent link="chassis"/>
+      <axis xyz="0 1 0" rpy="0 0 0"/>
+      <limit effort="10000" velocity="1000"/>
+      <dynamics damping="1.0" friction="1.0"/>
+    </joint>
+
+    <!-- Create rr wheel -->
+  <link name="wheel_rr">
+      <visual>
+        <origin xyz="0 0 0" rpy=" 0 1.5707 1.5707"/>
+        <geometry>
+          <cylinder radius="0.1" length="0.05"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy=" 0 1.5707 1.5707"/>
+        <geometry>
+          <cylinder radius="0.1" length="0.05"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <origin xyz="0 0 0" rpy=" 0 1.5707 1.5707"/>
+        <mass value="5.0"/>
+        <inertia
+            ixx="0.1" ixy="0" ixz="0"
+            iyy="0.1" iyz="0"
+            izz="0.1"
+        />
+      </inertial>
+    </link>
+  
+    <joint type="continuous" name="wheel_rr_hinge">
+      <origin xyz="-0.125 -0.2 0" rpy="0 0 0"/>
+      <child link="wheel_rr"/>
+      <parent link="chassis"/>
+      <axis xyz="0 1 0" rpy="0 0 0"/>
+      <limit effort="10000" velocity="1000"/>
+      <dynamics damping="1.0" friction="1.0"/>
+    </joint>
+
 
 </robot>
