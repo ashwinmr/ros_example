@@ -33,4 +33,7 @@
   <!--launch rviz-->
   <node name="rviz" pkg="rviz" type="rviz" respawn="false"/>
 
+  <!-- Launch ball chaser-->
+  <include file="$(find ball_chaser)/launch/ball_chaser.launch"/>
+
 </launch>
