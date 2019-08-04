@@ -235,5 +235,25 @@
       <child link="hokuyo"/>
     </joint>
 
+  <!-- Add colors -->
+  <gazebo reference="wheel_fl">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="wheel_fr">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="wheel_rl">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="wheel_rr">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="chassis">
+    <material>Gazebo/Brown</material>
+  </gazebo>
+  <gazebo reference="camera">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
 
 </robot>
