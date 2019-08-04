@@ -249,7 +249,7 @@
     <material>Gazebo/Black</material>
   </gazebo>
   <gazebo reference="chassis">
-    <material>Gazebo/Brown</material>
+    <material>Gazebo/Yellow</material>
   </gazebo>
   <gazebo reference="camera">
     <material>Gazebo/Blue</material>
