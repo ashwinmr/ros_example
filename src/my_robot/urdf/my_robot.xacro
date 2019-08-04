@@ -3,6 +3,8 @@
 <!-- Create robot -->
 <robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+  <xacro:include filename="$(find my_robot)/urdf/my_robot.gazebo" />
+
   <!-- Create footprint -->
   <link name="robot_footprint"/>
 
