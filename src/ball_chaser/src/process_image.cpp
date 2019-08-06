@@ -39,7 +39,10 @@ void process_image_callback(const sensor_msgs::Image img)
       bool found = false;
       for(int j=0; j < img.step; j+= 3){
         int idx = i*img.step + j;
-        if(img.data[idx] == img.data[idx+1] == img.data[idx+2] == white_pixel){
+        if(   (img.data[idx] == white_pixel)
+           && (img.data[idx+1] == white_pixel)
+           && (img.data[idx+2] == white_pixel)){
+             
           if(j < left_bound){
             loc = LEFT;
           }
